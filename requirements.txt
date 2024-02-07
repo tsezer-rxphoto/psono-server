@@ -4,8 +4,8 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
---index-url https://psono.jfrog.io/psono/api/pypi/pypi/simple
-
+asgiref==3.7.2
+    # via django
 bcrypt==3.1.7
     # via -r requirements.in
 boto3==1.12.36
@@ -28,6 +28,17 @@ defusedxml==0.6.0
     # via python3-openid
 dj-database-url==0.5.0
     # via -r requirements.in
+django==3.2.24
+    # via
+    #   -r requirements.in
+    #   django-allauth
+    #   django-anymail
+    #   django-cors-headers
+    #   django-filter
+    #   django-postgrespool2
+    #   django-redis
+    #   django-rest-auth
+    #   djangorestframework
 django-allauth==0.41.0
     # via -r requirements.in
 django-anymail==7.0.0
@@ -42,17 +53,6 @@ django-redis==4.10.0
     # via -r requirements.in
 django-rest-auth==0.9.5
     # via -r requirements.in
-django==2.2.20
-    # via
-    #   -r requirements.in
-    #   django-allauth
-    #   django-anymail
-    #   django-cors-headers
-    #   django-filter
-    #   django-postgrespool2
-    #   django-redis
-    #   django-rest-auth
-    #   djangorestframework
 djangorestframework==3.12.1
     # via
     #   -r requirements.in
@@ -99,8 +99,6 @@ raven==6.10.0
     # via -r requirements.in
 redis==3.4.1
     # via django-redis
-requests-oauthlib==1.3.0
-    # via django-allauth
 requests==2.24.0
     # via
     #   -r requirements.in
@@ -108,6 +106,8 @@ requests==2.24.0
     #   django-anymail
     #   requests-oauthlib
     #   yubico-client
+requests-oauthlib==1.3.0
+    # via django-allauth
 s3transfer==0.3.3
     # via boto3
 scrypt==0.8.13
